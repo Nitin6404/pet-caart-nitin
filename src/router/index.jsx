@@ -6,7 +6,7 @@ const Router = () => {
     return (
         <Routes>
             <Route path="/" element={<EarlyAccessPage />} />
-            <Route path="/get-response" element={<EarlyAccessResponsePage />} />
+            <Route path="/records" element={<EarlyAccessResponsePage />} />
         </Routes>
     );
 }
