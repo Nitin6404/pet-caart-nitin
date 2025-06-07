@@ -67,7 +67,6 @@ const EarlyAccessForm = () => {
 
     try {
       const response = await postPetCaartResponse(formData);
-      console.log(response);
 
       const res = response?.response;
 
@@ -81,9 +80,6 @@ const EarlyAccessForm = () => {
     } finally {
       setLoading(false);
     }
-
-    console.log("Form submitted:", formData);
-    // You can add submission logic here
   };
 
   const handleNotifyClick = (e) => {
