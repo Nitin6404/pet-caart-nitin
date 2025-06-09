@@ -19,14 +19,14 @@ const EarlyAccessForm = () => {
 
       {showForm && <EarlyAccessDialog onClose={() => setShowForm(false)} />}
 
-      <div className="w-full max-w-md h-full flex flex-col justify-between items-center px-4 py-6">
+      <div className="w-full h-full flex flex-col justify-between items-center px-4 py-6">
         <img
           src={petLogo}
           alt="PetCaart Logo"
           className="w-40 md:w-52 object-contain"
         />
 
-        <div className="flex flex-col justify-center items-center flex-1 text-center">
+        <div className="flex flex-col justify-center items-center flex-1 text-center w-full">
           <div className="mb-4 text-4xl">👍</div>
 
           <div className="space-y-2 mb-6">
