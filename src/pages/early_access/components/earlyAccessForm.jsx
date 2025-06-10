@@ -63,7 +63,7 @@ const EarlyAccessForm = () => {
           <a
             href="https://www.instagram.com/petcaart.official"
             target="_blank"
-            className="p-2 bg-gray-100 rounded-full hover:bg-gray-200"
+            className="p-2 bg-gray-100 rounded-full hover:bg-gray-200 z-10"
           >
             <Instagram className="w-6 h-6" />
           </a>

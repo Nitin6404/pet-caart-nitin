@@ -83,7 +83,7 @@ const EarlyAccessDialog = ({ onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
       <div
-        className={`relative bg-white/80 backdrop-blur-md w-full max-w-md p-8 rounded-2xl shadow-2xl border border-white/40 overflow-hidden transition-all duration-500 ${
+        className={`relative bg-white/90 backdrop-blur-md w-full max-w-md p-8 rounded-2xl shadow-2xl border border-white/40 overflow-hidden transition-all duration-500 ${
           isClosing ? "animate-fadeOut" : "animate-fadeIn"
         }`}
       >
