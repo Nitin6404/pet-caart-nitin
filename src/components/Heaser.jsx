@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { Search, Menu, MapPin } from "lucide-react" 
+import { Search, Menu, MapPin } from "lucide-react" // <-- Added MapPin
 import cartIcon from "../assets/cart.png"
 import truckIcon from "../assets/truck.png"
 import petLogo from "../assets/pet.png"
