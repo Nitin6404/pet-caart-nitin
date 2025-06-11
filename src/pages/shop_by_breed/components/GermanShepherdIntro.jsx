@@ -25,8 +25,8 @@ const GermanShepherdIntro = () => {
         {/* Right Info Section */}
         <div className="col-span-2 flex flex-col gap-8">
           {/* Color, Weight, Height */}
-          <div className="bg-[#FFF6EA] p-4 rounded-3xl">
-            <div className="text-2xl font-medium text-[#181818] rounded-2xl border-2 border-dashed border-[#F59A11] bg-[#FFEACC] px-4 py-0 grid grid-rows-3 gap-4">
+          <div className="bg-[#FFEACD] p-4 rounded-3xl">
+            <div className="text-2xl font-medium text-[#181818] rounded-2xl border-2 border-dashed border-[#F59A11] bg-[#FFE3B9] px-4 py-0 grid grid-rows-3 gap-4">
               <div className="flex justify-between ">
                 <div className="flex items-center gap-2">
                   <img

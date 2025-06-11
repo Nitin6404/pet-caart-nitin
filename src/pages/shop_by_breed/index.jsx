@@ -7,10 +7,11 @@ import ApplodBanner from "../../components/ApplodBanner";
 import Header from "../../components/Header";
 import CategoryNavbar from "../../components/Navbar";
 import Training from "./components/Training";
+import Grooming from "./components/Grooming";
 
 const ShopByBreed = () => {
   return (
-    <div className="w-full h-screen overflow-x-hidden">
+    <div className="w-full h-screen overflow-x-hidden bg-[#FEF5E7]">
       <Header />
       <CategoryNavbar />
         <Category />
@@ -34,6 +35,9 @@ const ShopByBreed = () => {
       </div>
       <div className="mt-10">
         <ApplodBanner />
+      </div>
+      <div className="mt-10">
+        <Grooming />
       </div>
     </div>
   );
