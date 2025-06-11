@@ -17,58 +17,60 @@ const Traits = () => {
       </p>
 
       {/* Traits Circle Section */}
-      <div className="relative w-full flex justify-center items-center my-16 ">
+      <div className="relative w-full flex justify-center items-center mt-16 mb-10">
         {/* Trait Labels Positioned Around the Circle */}
         {[
           {
             label: "Playfulness",
             score: "4/5",
-            className: "top-0 left-1/2 -translate-x-1/2",
+            className: "top-[-5%] left-1/2 -translate-x-1/2 z-50",
           },
           {
             label: "Friendliness",
             score: "4/5",
-            className: "top-[20%] right-[10%]",
+            className: "top-[3%] right-[35%] z-50",
           },
           {
             label: "Good With Other Dogs",
             score: "4/5",
-            className: "top-1/2 right-0 -translate-y-1/2",
+            className: "top-[30%] right-[28%] -translate-y-1/2",
           },
           {
             label: "First Time Ownership",
             score: "4/5",
-            className: "bottom-[20%] right-[10%]",
+            className: "top-1/2 right-[27%] z-50",
           },
           {
             label: "Barking Tendancies",
             score: "4/5",
-            className: "bottom-0 left-1/2 -translate-x-1/2",
+            className: "top-1/2 left-[27%] z-50",
           },
           {
             label: "Energy Level",
             score: "5/5",
-            className: "bottom-[20%] left-[10%]",
+            className: "top-[30%] left-[28%] -translate-y-1/2",
           },
           {
             label: "Good With Kids",
             score: "4/5",
-            className: "top-1/2 left-0 -translate-y-1/2",
+            className: "top-[3%] left-[35%] z-50",
           },
         ].map((trait, idx) => (
           <div
             key={idx}
-            className={`absolute text-center text-[#2E2E2E] ${trait.className}`}
+            className={`absolute text-center text-[#2E2E2E] ${trait.className} border-8 border-l-[#F59A11] border-t-[#F59A11] border-b-[#F59A11] rounded-full lg:w-[72px] lg:h-[72px] md:w-[60px] md:h-[60px] w-[50px] h-[50px] flex flex-col justify-center items-start`} 
           >
-            <p className="font-bold text-sm">{trait.score}</p>
-            <p className="text-sm">{trait.label}</p>
+            <p className="font-bold text-[33px]">{trait.score}</p>
+              <div className="relative">
+                <p className="absolute -bottom-5 text-xl font-medium text-[#004E6A] ">{trait.label}</p>
+              </div>
           </div>
         ))}
 
         {/* Dog Name Circle */}
         {/* Dog Name Circle */}
         <div
-          className="relative w-[420px] h-[420px] rounded-full flex items-center justify-center"
+          className="relative w-[420px] h-[420px] rounded-full flex items-center justify-center my-20"
           style={{
             background:
               "linear-gradient(90deg, #1C83A8 0%, #48BDE6 31.48%, #2F90B3 75%, rgba(19, 120, 157, 0.901961) 100%)",
