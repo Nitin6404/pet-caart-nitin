@@ -1,3 +1,5 @@
+import ScrollableBanners from "../../../components/ScrollableBanners";
+
 const Traits = () => {
   return (
     <div className="w-full px-8 space-y-4 overflow-x-hidden">
@@ -56,6 +58,8 @@ const Traits = () => {
             <span><span className="text-[#F73518]">Note: {" "}</span></span>
         These attributes have been rated by dog trainers, expert vets and pet behaviorists. Remember that all dogs are individuals with their own personalities.
       </p>
+
+      <ScrollableBanners />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 
-const DietProcess = () => {
+const GroomingProcess = () => {
   const products = [
     { id: 1, name: "Chicken Based Food", image: "/food.png" },
     { id: 2, name: "Chicken Based Food", image: "/food.png" },
@@ -8,8 +8,6 @@ const DietProcess = () => {
     { id: 4, name: "Chicken Based Food", image: "/food.png" },
     { id: 5, name: "Chicken Based Food", image: "/food.png" },
     { id: 6, name: "Chicken Based Food", image: "/food.png" },
-    { id: 7, name: "Chicken Based Food", image: "/food.png" },
-    { id: 8, name: "Chicken Based Food", image: "/food.png" },
   ];
 
   const instructions = [
@@ -25,35 +23,23 @@ const DietProcess = () => {
       description:
         "German Shepherds have a sensitive stomach and should avoid food that includes fillers such as wheat and soy that are difficult to digest and may cause stomach upset.",
     },
-    {
-      id: 3,
-      title: "Add Essential Fatty Acids",
-      description:
-        "German Shepherds have a thick double coat that requires essential fatty acids and vitamins to keep them healthy and shiny. Look for food that contains Omega-3 and Omega-6 fatty acids.",
-    },
-    {
-      id: 4,
-      title: "Consider their age",
-      description:
-        "Choose an appropriate diet according to your German Shepherd's age, as puppies need more protein and fat for growth, while senior dogs may require lower levels for weight management.",
-    },
   ];
 
   const ProductCard = ({ product, index }) => (
     <div className="relative flex justify-center items-center">
-      <div className="p-4 flex flex-col justify-center items-center">
+      <div className="p-2 flex flex-col justify-center items-center">
         <img
           src={product.image}
           alt={product.name}
-        className="object-cover lg:w-[400px] lg:h-[275px] md:w-[300px] md:h-[200px] w-[200px] h-[150px]"
+        className="object-cover lg:w-[250px] lg:h-[170px] md:w-[200px] md:h-[150px] w-[150px] h-[100px]"
         />
-        <h3 className="text-[33px] font-medium text-[#181818] text-center">
+        <h3 className="text-xl font-medium text-[#181818] text-center">
           {product.name}
         </h3>
       </div>
       <div className="h-10 w-10">
-        <div className="absolute flex justify-center items-center top-0 right-0 bg-[#F59A11] text-white rounded-lg w-[50px] h-[50px] ">
-          <ArrowUpRight className="w-8  h-8 " />
+        <div className="absolute flex justify-center items-center top-0 right-0 bg-[#F59A11] text-white rounded-lg w-8 h-8 ">
+          <ArrowUpRight className="w-5  h-5 " />
         </div>
       </div>
     </div>
@@ -86,7 +72,7 @@ const DietProcess = () => {
       <div className="space-y-8">
         {instructions.map((instruction, index) => {
           const isLeft = index % 2 === 0;
-          const productIndices = [index * 2, index * 2 + 1]; // Indices of products for each instruction
+          const productIndices = [index * 2, index * 2 + 1, index * 2 + 2]; // Indices of products for each instruction
           return (
             <div className="grid grid-cols-5 gap-8 items-center" key={instruction.id}>
               {isLeft ? (
@@ -94,7 +80,7 @@ const DietProcess = () => {
                   <div className="col-span-2">
                     <InstructionCard instruction={instruction} isLeft={true} />
                   </div>
-                  <div className="col-span-3 grid grid-cols-2 gap-4">
+                  <div className="col-span-3 grid grid-cols-3 gap-4">
                     {productIndices.map(
                       (productIndex) =>
                         products[productIndex] && (
@@ -109,7 +95,7 @@ const DietProcess = () => {
                 </>
               ) : (
                 <>
-                  <div className="col-span-3 grid grid-cols-2 gap-4">
+                  <div className="col-span-3 grid grid-cols-3 gap-4">
                     {productIndices.map(
                       (productIndex) =>
                         products[productIndex] && (
@@ -134,4 +120,4 @@ const DietProcess = () => {
   );
 };
 
-export default DietProcess;
+export default GroomingProcess;

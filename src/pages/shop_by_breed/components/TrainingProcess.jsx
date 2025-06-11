@@ -26,27 +26,29 @@ const TrainingProcess = () => {
   ];
 
   const ProductCard = ({ product, index }) => (
-    <div className="relative bg-white rounded-lg overflow-hidden">
-      <div className="p-4">
+    <div className="relative flex justify-center items-center">
+      <div className="p-4 flex flex-col justify-center items-center">
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-48 object-cover rounded-md mb-3"
+        className="object-cover lg:w-[250px] lg:h-[170px] md:w-[200px] md:h-[150px] w-[150px] h-[100px]"
         />
-        <h3 className="text-2xl font-medium text-[#181818] text-center">
+        <h3 className="text-xl font-medium text-[#181818] text-center">
           {product.name}
         </h3>
       </div>
       <div className="h-10 w-10">
-        <ArrowUpRight className="absolute top-2 right-2 bg-[#F59A11] text-white rounded-md w-6 h-6" />
+        <div className="absolute flex justify-center items-center top-0 right-0 bg-[#F59A11] text-white rounded-lg w-8 h-8 ">
+          <ArrowUpRight className="w-5  h-5 " />
+        </div>
       </div>
     </div>
   );
 
   const InstructionCard = ({ instruction, isLeft }) => (
     <div
-      className={`bg-[#E6F3F7] p-4 ${
-        isLeft ? "rounded-r-lg" : "rounded-l-lg"
+      className={`bg-[#E6F3F7] p-6 tracking-[0.57px] leading-[38px] ${
+        isLeft ? "rounded-r-3xl" : "rounded-l-3xl"
       }`}
     >
       <div className="flex items-start gap-3">
@@ -54,10 +56,10 @@ const TrainingProcess = () => {
           {instruction.id}
         </div>
         <div className="border-2 border-dashed border-[#0888B1] p-4 rounded-2xl bg-[#BADEE9] space-y-4">
-          <h3 className="font-medium text-[#181818] text-2xl">
+          <h3 className="font-medium text-[#181818] text-[32px]">
             {instruction.title}
           </h3>
-          <p className="text-xl text-[#323232]">
+          <p className="text-[28px] text-[#323232]">
             {instruction.description}
           </p>
         </div>
@@ -72,13 +74,13 @@ const TrainingProcess = () => {
           const isLeft = index % 2 === 0;
           const productIndices = [index * 2, index * 2 + 1, index * 2 + 2]; // Indices of products for each instruction
           return (
-            <div className="grid grid-cols-3 gap-8 items-center" key={instruction.id}>
+            <div className="grid grid-cols-5 gap-8 items-center" key={instruction.id}>
               {isLeft ? (
                 <>
-                  <div className="col-span-1">
+                  <div className="col-span-2">
                     <InstructionCard instruction={instruction} isLeft={true} />
                   </div>
-                  <div className="col-span-2 grid grid-cols-3 gap-4">
+                  <div className="col-span-3 grid grid-cols-3 gap-4">
                     {productIndices.map(
                       (productIndex) =>
                         products[productIndex] && (
@@ -93,7 +95,7 @@ const TrainingProcess = () => {
                 </>
               ) : (
                 <>
-                  <div className="col-span-2 grid grid-cols-3 gap-4">
+                  <div className="col-span-3 grid grid-cols-3 gap-4">
                     {productIndices.map(
                       (productIndex) =>
                         products[productIndex] && (
@@ -105,7 +107,7 @@ const TrainingProcess = () => {
                         )
                     )}
                   </div>
-                  <div className="col-span-1">
+                  <div className="col-span-2">
                     <InstructionCard instruction={instruction} isLeft={false} />
                   </div>
                 </>

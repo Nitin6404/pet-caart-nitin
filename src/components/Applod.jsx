@@ -12,18 +12,6 @@ function Applod() {
 
   return (
     <>
-      {/* Inline CSS to hide scrollbar */}
-      <style>
-        {`
-          .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-          }
-          .hide-scrollbar {
-            -ms-overflow-style: none;  /* IE & Edge */
-            scrollbar-width: none;     /* Firefox */
-          }
-        `}
-      </style>
 
       {/* Applod Logo */}
       <div className="w-full h-auto min-h-[150px] max-w-screen rounded-lg overflow-hidden p-2 pr-4">

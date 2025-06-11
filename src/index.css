@@ -69,8 +69,8 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   } */
-   width: 100vw;
-   height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 /* Regular */
@@ -98,4 +98,16 @@ button:focus-visible {
   font-weight: 400;
   font-style: italic;
   font-display: swap;
+}
+
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  /* IE & Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
